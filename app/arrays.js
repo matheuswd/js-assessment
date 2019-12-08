@@ -16,7 +16,9 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy: function(arr, item) {
-
+    return arr.filter(function(number) {
+      return item !== number;
+    });
   },
 
   append: function(arr, item) {
@@ -49,15 +51,21 @@ exports.arraysAnswers = {
   },
 
   count: function(arr, item) {
-
+    return arr.filter(function(number) {
+      return item === number;
+    }).length;
   },
 
   duplicates: function(arr) {
+    return arr.reduce(function(acc, number, index) {
 
+    }, []);
   },
 
   square: function(arr) {
-
+    return arr.map(function(number) {
+      return number ** 2;
+    });
   },
 
   findAllOccurrences: function(arr, target) {

@@ -20,19 +20,23 @@ exports.arraysAnswers = {
   },
 
   append: function(arr, item) {
-    return arr.push(item);
+    arr.push(item);
+    return arr;
   },
 
   truncate: function(arr) {
-
+    arr.pop();
+    return arr;
   },
 
   prepend: function(arr, item) {
-
+    arr.unshift(item);
+    return arr;
   },
 
   curtail: function(arr) {
-
+    arr.shift();
+    return arr;
   },
 
   concat: function(arr1, arr2) {
@@ -40,7 +44,8 @@ exports.arraysAnswers = {
   },
 
   insert: function(arr, item, index) {
-
+    arr.splice(index, 0, item);
+    return arr;
   },
 
   count: function(arr, item) {
